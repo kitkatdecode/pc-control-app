@@ -32,16 +32,24 @@ After running app on smartphone run the HTTP server in your PC -
 
 The `HTTP server` in this repo uses `Python Flask` server which can be run using following commands-
 
-Install ```Flask``` and ```pyautogui``` (for controlling action):
+Install ```Flask``` :
 
+```pip install flask```
+
+and ```pyautogui``` (for controlling action):
+
+**Note:** At time of this version ```pyautogui``` does not include certain keyboard keys related to multimedia player for Linux platform. Which I included in my branch for ```pyautogui```, can be found here (https://github.com/kitkatdecode/pyautogui).
+
+So to work this code on ```Linux``` you can install ```pyautogui``` from above repo. Download the code and run ```pip install .``` inside the downloaded directory.
+
+On ```Windows``` you can install using:
 ```
-pip install flask
 pip install pyautogui
 ```
 
-First set environment variable ```FLASK_APP```-
+After that open terminal and set environment variable ```FLASK_APP```-
 
-Go to ```server``` directory then
+Move to ```mobileplayercontrol/server``` directory
 
 ```
 In Linux:
