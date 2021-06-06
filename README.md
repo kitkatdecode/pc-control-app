@@ -32,7 +32,7 @@ Check out more description on how to run or build -
 # Run server on PC
 After running app on smartphone run the HTTP server in your PC -
 
-The `HTTP server` in this repo uses `Python Flask` server which can be run using following commands-
+The `HTTP server` in this repo uses `Python Flask` server -
 
 Install ```Flask``` :
 
