@@ -1,4 +1,6 @@
-`pc-control-app`
+`pc-control-app`   
+
+`react-native`   `expo`   `Node.js` `Python Flask` `pyautogui`
 
 A simple PC controlling app made in `react-native` (expo-built) which uses a local HTTP server running on PC.
 
