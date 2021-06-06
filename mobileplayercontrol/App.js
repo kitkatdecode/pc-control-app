@@ -93,6 +93,15 @@ const App = () => {
     });
   }
 
+  const screenLockHandle = () => {
+    let url = "http://"+ip+"/screenlock";
+    fetch(url, {
+        method: 'PUT'
+    }).catch((error) => {
+      alert(error);
+    });
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.hint}>Change IP address if connection failed</Text>
@@ -112,6 +121,12 @@ const App = () => {
       </View>
       
       <View style={styles.vertical}>
+        <TouchableOpacity onPress={screenLockHandle}>
+          <View style={styles.screenLockButton}> 
+            <MaterialIcons name="lock-outline" size={40} color="white" />
+          </View>
+        </TouchableOpacity>
+
         <TouchableOpacity onPress={upButtonHandle}>
           <View style={styles.upButton}> 
             <MaterialIcons name="arrow-drop-up" size={60} color="white" />
@@ -189,13 +204,21 @@ const styles = StyleSheet.create({
   vertical:{
     flex:4,
     alignItems: 'center',
-    
+  },
+  screenLockButton:{
+    backgroundColor: 'blue',
+    width: 180,
+    height: 60,
+    alignItems: 'center',
+    paddingBottom:10,
+    paddingTop:10,
+    marginTop: 50,
+    borderRadius:30,
   },
   horizontal:{
     flex:1,
     flexDirection:'row',
     alignItems: 'center',
-    
   },
   circle: {
     backgroundColor: 'blue',
@@ -234,7 +257,7 @@ const styles = StyleSheet.create({
     paddingBottom:10,
     borderTopLeftRadius:120,
     borderTopRightRadius:120,
-    marginTop: 90,
+    marginTop: 40,
   },
   downButton:{
     backgroundColor: 'blue',
@@ -244,8 +267,8 @@ const styles = StyleSheet.create({
     paddingBottom:10,
     borderBottomLeftRadius:120,
     borderBottomRightRadius:120,
-    marginBottom: 120,
-    marginTop:4,
+    marginBottom: 70,
+    // marginTop:2,
   },
 });
 

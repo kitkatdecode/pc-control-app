@@ -1,5 +1,6 @@
 from flask import Flask
 import pyautogui
+import ctypes
 
 app = Flask(__name__)
 
@@ -41,6 +42,13 @@ def leftCmd():
 def centerCmd():
     # print("cmd: CENTER")
     pyautogui.press('playpause')
+    return "Success"
+
+
+@app.route('/screenlock', methods=['PUT'])
+def screenlockCmd():
+    # print("cmd: SCREENLOCK")
+    ctypes.windll.user32.LockWorkStation()
     return "Success"
 
 
