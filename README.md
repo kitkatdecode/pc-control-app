@@ -65,4 +65,5 @@ Once the server starts listening (you can run it in background) then you can use
 
 **Note:** You should provide the correct IPv4 address of your PC (your smartphone and PC must be connected to same network) with port number in the smartphone app and save it, using provided input field. Once saved you don't need to change it untill the IP address of the PC changes, it stores IP address in the local persistent storage on the smartphone.
 
-
+# App screen
+![app_screen](https://github.com/kitkatdecode/laptop-control-app/blob/main/images/app_screen.jpg)
