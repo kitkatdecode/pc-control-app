@@ -40,7 +40,7 @@ and ```pyautogui``` (for controlling action):
 
 **Note:** At time of this version ```pyautogui``` does not include certain keyboard keys related to multimedia player for Linux platform. Which I included in my branch for ```pyautogui```, can be found here (https://github.com/kitkatdecode/pyautogui).
 
-So to work this code on ```Linux``` you can install ```pyautogui``` from above repo. Download the code and run ```pip install .``` inside the downloaded directory.
+So to work this code on ```Linux``` you can install ```pyautogui``` from above repo. Download the code and run ```pip install .``` inside the downloaded ```pyautogui``` directory.
 
 On ```Windows``` you can install using:
 ```
