@@ -19,7 +19,7 @@ First build and install smartphone app on your smartphone from `mobileplayercont
 
 It requires ```Node.js``` ([Install Node.js](https://nodejs.org/en/download/)). 
 
-Run ```npm install``` it will install all the dependencies.
+Run ```npm install``` (inside mobileplayercontrol/ directory), it will install all the dependencies.
 
 It is a `react-native` app built using `expo`. You can also run it using `expo go` app or in a `simulator` without installing it.
 
