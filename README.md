@@ -1,6 +1,6 @@
 `pc-control-app`   
 
-`react-native`   `expo`   `Node.js` `Python Flask` `pyautogui`
+`react-native`   `expo`   `Node.js` `Flask` `pyautogui`
 
 A simple PC controlling app made in `react-native` (expo-built) which uses a local HTTP server running on PC.
 
@@ -40,7 +40,7 @@ Install ```Flask``` :
 
 and ```pyautogui``` (for controlling action):
 
-**Note:** At time of this version ```pyautogui``` does not include certain keyboard keys related to multimedia player for Linux platform. Which I included in my branch for ```pyautogui```, can be found here (https://github.com/kitkatdecode/pyautogui).
+**Note:** At time of this version ```pyautogui``` does not include certain keyboard keys related to multimedia player for Linux platform. Which I included in my branch for ```pyautogui```, can be found here (https://github.com/kitkatdecode/pyautogui/tree/update).
 
 So to work this code on ```Linux``` you can install ```pyautogui``` from above repo. Download the code and run ```pip install .``` inside the downloaded ```pyautogui``` directory.
 
