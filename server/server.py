@@ -27,7 +27,6 @@ def upCmd():
 @app.route('/down', methods=['PUT'])
 def downCmd():
     # print("cmd: DOWN")
-    # pyautogui.press('volumedown')
     pyautogui.press('volumedown')
     return "Success"
 
