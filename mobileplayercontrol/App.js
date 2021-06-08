@@ -1,8 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect }  from 'react';
-import { StyleSheet, Text, View, TextInput, Dimensions, TouchableOpacity } from 'react-native';
+import {
+  StatusBar,
+  StyleSheet,
+  TextInput,
+  Text,
+  Dimensions,
+  TouchableOpacity,
+  View
+} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { MaterialIcons } from '@expo/vector-icons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const App = () => {
   const [ip, setIp] = useState('192.168.15.153:5000');
@@ -36,10 +43,6 @@ const App = () => {
     } catch (e) {
       alert('Failed to save the data to the storage: '+e);
     }
-  }
-
-  const handleChange = (ip_address) => {
-      setTemp(ip_address);
   }
 
   const handleSubmit = () => {
@@ -93,7 +96,7 @@ const App = () => {
     });
   }
 
-  const screenLockHandle = () => {
+  const screenLockHandle = () =>{
     let url = "http://"+ip+"/screenlock";
     fetch(url, {
         method: 'PUT'
@@ -103,63 +106,65 @@ const App = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.hint}>Change IP address if connection failed</Text>
-      <View style={styles.inputBox}>
-      <TextInput 
-          style={styles.textInput} 
-          keyboardType='default'
-          placeholder={ip}
-          onChangeText={(val) => handleChange(val)} 
-          value={temp}
-      />
-      <View style={styles.button}>
-      <TouchableOpacity onPress={handleSubmit} >
-          <Text style={styles.buttonText}>Save</Text>
-      </TouchableOpacity>
-      </View>
-      </View>
-      
-      <View style={styles.vertical}>
-        <TouchableOpacity onPress={screenLockHandle}>
-          <View style={styles.screenLockButton}> 
-            <MaterialIcons name="lock-outline" size={40} color="white" />
-          </View>
+    <>
+      <View style={styles.container}>
+        <Text style={styles.hint}>Change IP address if connection failed</Text>
+        <View style={styles.inputBox}>
+        <TextInput 
+            style={styles.textInput} 
+            keyboardType='default'
+            placeholder={ip}
+            onChangeText={(val) => setTemp(val)} 
+            value={temp}
+        />
+        <View style={styles.button}>
+        <TouchableOpacity onPress={handleSubmit} >
+            <Text style={styles.buttonText}>Save</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity onPress={upButtonHandle}>
-          <View style={styles.upButton}> 
-            <MaterialIcons name="arrow-drop-up" size={60} color="white" />
-          </View>
-        </TouchableOpacity>
-
-        <View style={styles.horizontal}>
-          <TouchableOpacity onPress={leftButtonHandle}>
-            <View style={styles.leftButton}>
-              <MaterialIcons name="arrow-left" size={60} color="white" />
+        </View>
+        </View>
+        
+        <View style={styles.vertical}>
+          <TouchableOpacity onPress={screenLockHandle}>
+            <View style={styles.screenLockButton}> 
+              <MaterialIcons name="lock-outline" size={40} color="white" />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={centerButtonHandle}>
-            <View style={styles.circle}>
-              <MaterialIcons name="play-circle-outline" size={60} color="white"/>
+
+          <TouchableOpacity onPress={upButtonHandle}>
+            <View style={styles.upButton}> 
+              <MaterialIcons name="arrow-drop-up" size={60} color="white" />
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={rightButtonHandle}>
-            <View style={styles.rightButton}>
-              <MaterialIcons name="arrow-right" size={60} color="white" />
+
+          <View style={styles.horizontal}>
+            <TouchableOpacity onPress={leftButtonHandle}>
+              <View style={styles.leftButton}>
+                <MaterialIcons name="arrow-left" size={60} color="white" />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={centerButtonHandle}>
+              <View style={styles.circle}>
+                <MaterialIcons name="play-circle-outline" size={60} color="white"/>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={rightButtonHandle}>
+              <View style={styles.rightButton}>
+                <MaterialIcons name="arrow-right" size={60} color="white" />
+              </View>
+            </TouchableOpacity>
+          </View>
+          <TouchableOpacity onPress={downButtonHandle}>
+            <View style={styles.downButton}>
+              <MaterialIcons name="arrow-drop-down" size={60} color="white" />
             </View>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity onPress={downButtonHandle}>
-          <View style={styles.downButton}>
-            <MaterialIcons name="arrow-drop-down" size={60} color="white" />
-          </View>
-        </TouchableOpacity>
+        <StatusBar barStyle={'dark-content'} backgroundColor={'#fff'} />
       </View>
-      <StatusBar style="auto" />
-    </View>
+    </>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -169,7 +174,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   hint:{
-    marginTop:70,
+    marginTop:40,
   },
   inputBox: {
       flexDirection: 'row',
@@ -212,7 +217,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingBottom:10,
     paddingTop:10,
-    marginTop: 50,
+    marginTop: 60,
     borderRadius:30,
   },
   horizontal:{

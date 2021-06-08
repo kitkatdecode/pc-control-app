@@ -2,7 +2,12 @@ from flask import Flask
 import pyautogui
 import ctypes
 import sys
+
+import logging
 # %%
+
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
 
 app = Flask(__name__)
 
@@ -59,4 +64,4 @@ def screenlockCmd():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0", port=5000)
