@@ -71,6 +71,8 @@ After setting environment run following command to run the server (you can chang
 
 ```python -m flask run --host=0.0.0.0 --port=5000```
 
+or you can directly run server using `python server.py` it doesn't require to set environment variable.
+
 Once the server starts listening (you can run it in background) then you can use the smartphone app to control the media player and lock the screen.
 
 **Note:** You should provide the correct IPv4 address of your PC (your smartphone and PC must be connected to same network) with port number in the smartphone app and save it, using provided input field. Once saved you don't need to change it untill the IP address of the PC changes, it stores IP address in the local persistent storage on the smartphone.
